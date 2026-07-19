@@ -32,9 +32,15 @@ async function startBot() {
     })
 }
 startBot(hi){import { createBot } from "whatsflow";
-const bot = createBot();
+const bot = createBot(HOLYSPIRIT);
 bot.onText("hi", (msg, bot) => bot.reply(msg, "Hello!"));
-bot.start(); // scan QR code to connect
+bot.start(on); // scan QR code to connect
   "name": "holyspirit-bot",
+.menu` =ping
+.repo
+.prefix`=()
+             
 
+
+             
 }
