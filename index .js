@@ -8,7 +8,7 @@ const config = {
   owner: 'Morgy Khan',
   mode: 'public', // 'public' or 'private'
   enabled: true,
-  version: '1.0.0'
+  version: '16.9.8'
 };
 
 // ==================== COMMAND DEFINITIONS ====================
@@ -16,8 +16,18 @@ const config = {
 const commands = {
   // ✅ FIXED: AI Commands - Added missing commas, corrected quotes
   ai: [
-    'gpt', 'chatgpt', 'bard', 'gemini', 'claude', 'llama',
-    'deepseek', 'qwen', 'metaai', 'ask', 'question', 'chat'
+    'gpt', 
+    'chatgpt', 
+    'bard', 
+    'gemini', 
+    'claude', 
+    'llama',
+    'deepseek', 
+    'qwen', 
+    'metaai', 
+    'ask', 
+    'question', 
+    'chat'
   ],
 
   // ✅ FIXED: Image Commands - Fixed string formatting
@@ -29,52 +39,140 @@ const commands = {
 
   // ✅ FIXED: Voice & Translation Commands
   voice: [
-    'voice', 'tts', 'stt', 'translate', 'trans', 'lang'
+    'voice', 
+    'tts', 
+    'stt', 
+    'translate', 
+    'trans', 
+    'lang'
   ],
 
   // ✅ FIXED: Code Commands - Wrapped in proper array brackets
   code: [
-    'code', 'debug', 'html', 'css', 'js', 'python',
-    'react', 'node', 'write'
+    'code', 
+    'debug', 
+    'html', 
+    'css', 
+    'js', 
+    'python',
+    'react', 
+    'node', 
+    'write'
   ],
 
   // ✅ FIXED: Text Commands - Complete array with proper syntax
   text: [
-    'essay', 'story', 'poem', 'song', 'lyric', 'bio', 'caption',
-    'email', 'letter', 'resume', 'cover', 'tweet', 'thread',
-    'tiktokscript', 'youtube', 'script', 'summary', 'summarize',
-    'explain', 'learn', 'teach'
+    'essay', 
+    'story', 
+    'poem', 
+    'song', '
+    lyric', 
+    'bio', 'caption',
+    'email', 
+    'letter', 
+    'resume', 
+    'cover', 
+    'tweet', 
+    'thread',
+    'tiktokscript', 
+    'youtube',
+    'script', 
+    'summary', 
+    'summarize',
+    'explain', 
+    'learn', 
+    'teach'
   ],
 
   // ✅ FIXED: Education Commands
   education: [
-    'math', 'solve', 'physics', 'chemistry', 'biology',
-    'history', 'geography'
+    'math', 
+    'solve', 
+    'physics', 
+    'chemistry',
+    'biology',
+    'history', 
+    'geography'
   ],
 
   // ✅ FIXED: Info/Utility Commands - Removed invalid == and [ syntax
   info: [
-    'news', 'weather', 'stock', 'crypto', 'bitcoin', 'price',
-    'search', 'google', 'wiki', 'define', 'synonym', 'grammar',
-    'spell', 'rephrase', 'paraphrase', 'plagiarism'
+    'news', 
+    'weather',
+    'stock', 
+    'crypto', 
+    'bitcoin',
+    'price',
+    'search', 
+    'google', 
+    'wiki', 
+    'define', 
+    'synonym', 
+    'grammar',
+    'spell', 
+    'rephrase', 
+    'paraphrase', 
+    'plagiarism'
   ],
 
   // ✅ FIXED: Document Commands
   documents: [
-    'pdf', 'doc', 'excel', 'ppt'
+    'pdf',
+    'doc' 
+    'excel',
+  'ppt'
   ],
 
   // ✅ Download/Media Commands
   download: [
-    'ytmp3', 'ytmp4', 'play', 'song', 'video', 'ytsearch',
-    'ytplaylist', 'tiktok', 'ttdl', 'ttsearch', 'ig', 'igdl',
-    'igstory', 'igreel', 'igpost', 'fb', 'fbdl', 'fbwatch',
-    'twitter', 'twt', 'twtdl', 'threads', 'spotify', 'spotifydl',
-    'spotifyplay', 'soundcloud', 'scdl', 'mediafire', 'mf',
-    'gdrive', 'gd', 'apk', 'playstore', 'app', 'modapk',
-    'github', 'gitclone', 'git', 'npm', 'yarn', 'pinterest',
-    'pin', 'pinvid', 'imgur', 'img', 'wallpaper', 'wall',
-    'animepic', 'manga', 'nhentai', 'rule34'
+    'ytmp3',
+    'ytmp4', 
+    'play', 
+    'song', 
+    'video', 
+    'ytsearch',
+    'ytplaylist', 
+    'tiktok', 
+    'ttdl', 
+    'ttsearch'
+    'ig', 
+  'igdl',
+  'igstory', 
+  'igreel', 
+  'igpost', 
+  'fb', 
+  'fbdl', 
+  'fbwatch',
+    'twitter', 
+  'twt', '
+twtdl', 'threads', 'spotify', 'spotifydl',
+    'spotifyplay', 
+  'soundcloud', 
+  'scdl', 
+  'mediafire',
+  'mf',
+    'gdrive',
+  'gd', 
+  'apk',
+  'playstore',
+  'app', 
+  'modapk',
+    'github',
+  'gitclone',
+  'git', 
+  'npm', 
+  'yarn', 
+  'pinterest',
+   
+  'pin', 
+  'pinvid',
+  'imgur',
+  'img', 
+  'wallpaper',
+  'wall',
+    'animepic', 
+  'manga', '
+  nhentai', 'rule34'
   ]
 };
 
