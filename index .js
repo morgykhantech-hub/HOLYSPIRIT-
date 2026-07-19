@@ -1,263 +1,98 @@
-Holyspirit powed by MORGYKHANTECH 
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 
-const prefix = '.'
-const commands = new cmd
-    
+// Bot configuration
+const config = {
+  prefix: '.',
+  name: 'holyspirit-bot',
+  owner: 'Morgy Khan',
+  mode: 'public', // public or private
+  enabled: true
+};
+
+// Command categories
+const commands = {
+ai: ['gpt',
+'chatgpt',
+'bard'
+'gemini',
+'claude',
+`llama'
+``deepseek'
+, 'qwen', 
+'metaai'],
+image: ['
+imagine'
+, 'dalle', '
+toanime', '
+cartoon', 
+'logo', 
+'remove', 
+upscale', '
+removebg', 
+'blur', 
+'hd', 
+'remini'],
+  utility: 
+  ==search ]
+  'google', 
+  'wiki', '
+  define', 
+  ['[ttranslate'],
+  code: 
+  ['code', 
+  'debug', '
+  html', 
+  'css', '
+  js', '
+  python', '
+  react',
+  'node'],
+  text: 
+  ['write'], 
+  'essay', '
+  story', '
+  poem', '
+  song', '
+  bio', '
+  caption',
+  'email', '
+  letter']
+};
+
+// Initialize bot
+function startBot() {
+  try {
+const bot = require('whatsflow').createBot(config.name);
+bot.onText(/hi|hello/i, (msg) => {
+ bot.reply(msg, 'Hello! 👋');
+    });
+
+bot.onText(new RegExp(`^${config.prefix}(ping|menu|help)$`, 'i'), (msg, match) => {
+      const command = match[1].toLowerCase();
+      if (command === 'ping') {
+        bot.reply(msg, 'Pong! 🏓');
+      } else if (command === 'menu' || command === 'help') {
+        bot.reply(msg, formatMenu());
+      }
+    });
+
+    bot.start();
+    console.log('✅ HOLYSPIRIT Bot started successfully!');
+  } catch (error) {
+    console.error('❌ Error starting bot:', error.message);
+  }
 }
-startBot(hi){import { createBot } from "whatsflow";
-const bot = createBot(HOLYSPIRIT);
-bot.onText("hi", (msg, bot) => bot.reply(msg, "Hello!"));
-bot.start(on); // scan QR code to connect
-  "name": "holyspirit-bot",
-.menu` =ping
-.repo
-.prefix`=( )
-. owner:Morgy khan  
-.mode :public/ private  on / off
 
-const command = new commands 
-    1*[ai]
-gpt
-chatgpt
-bard
-gemini
-claude
-llama
-deepseek
-qwen
-metaai
-ask
-question
-chat
-imagine
-dalle
-toanime
-cartoon
-logo
-remove
-upscale
-removebg
-blur
-hd
-remini
-photo
-paint
-draw
-sketch
-3d
-text2img
-img2img
-voice
-tts
-stt
-translate
-trans
-lang
-code
-debug
-html
-css
-js
-python
-react
-node
-write
-essay
-story
-poem
-song
-lyric
-bio
-caption
-email
-letter
-resume
-cover
-tweet
-thread
-tiktokscript
-youtube
-script
-summary
-summarize
-explain
-learn
-teach
-math
-solve
-physics
-chemistry
-biology
-history
-geography
-news
-weather
-stock
-crypto
-bitcoin
-price
-search
-google
-wiki
-define
-synonym
-grammar
-spell
-rephrase
-paraphrase
-plagiarism
-pdf
-doc
-excel
-pptai
-gpt
-chatgpt
-bard
-gemini
-claude
-llama
-deepseek
-qwen
-metaai
-ask
-question
-chat
-imagine
-dalle
-toanime
-cartoon
-logo
-remove
-upscale
-removebg
-blur
-hd
-remini
-photo
-paint
-draw
-sketch
-3d
-text2img
-img2img
-voice
-tts
-stt
-translate
-trans
-lang
-code
-debug
-html
-css
-js
-python
-react
-node
-write
-essay
-story
-poem
-song
-lyric
-bio
-caption
-email
-letter
-resume
-cover
-tweet
-thread
-tiktokscript
-youtube
-script
-summary
-summarize
-explain
-learn
-teach
-math
-solve
-physics
-chemistry
-biology
-history
-geography
-news
-weather
-stock
-crypto
-bitcoin
-price
-search
-google
-wiki
-define
-synonym
-grammar
-spell
-rephrase
-paraphrase
-plagiarism
-pdf
-doc
-excel
-ppt
-             
-2==downloadytmp3
-ytmp4
-play
-song
-video
-ytsearch
-ytplaylist
-tiktok
-ttdl
-ttsearch
-ig
-igdl
-igstory
-igreel
-igpost
-fb
-fbdl
-fbwatch
-twitter
-twt
-twtdl
-threads
-spotify
-spotifydl
-spotifyplay
-soundcloud
-scdl
-mediafire
-mf
-gdrive
-gd
-apk
-playstore
-app
-modapk
-github
-gitclone
-git
-npm
-yarn
-pinterest
-pin
-pinvid
-imgur
-img
-wallpaper
-wall
-animepic
-manga
-nhentai
-rule34      
-
-
-             
+function formatMenu() {
+  let menu = '🤖 *HOLYSPIRIT Bot Commands*\n\n';
+  Object.entries(commands).forEach(([category, cmds]) => {
+    menu += `*${category.toUpperCase()}:*\n${config.prefix}${cmds.join(`\n${config.prefix}`)}\n\n`;
+  });
+  return menu;
 }
+
+// Start the bot
+startBot();
+
+module.exports = { startBot, config, commands };
