@@ -16,7 +16,9 @@ bot.start(on); // scan QR code to connect
 .prefix`=( )
 . owner:Morgy khan  
 .mode :public/ private  on / off
-        1*[ai]
+
+const command = new commands 
+    1*[ai]
 gpt
 chatgpt
 bard
@@ -204,7 +206,57 @@ doc
 excel
 ppt
              
-        
+2==downloadytmp3
+ytmp4
+play
+song
+video
+ytsearch
+ytplaylist
+tiktok
+ttdl
+ttsearch
+ig
+igdl
+igstory
+igreel
+igpost
+fb
+fbdl
+fbwatch
+twitter
+twt
+twtdl
+threads
+spotify
+spotifydl
+spotifyplay
+soundcloud
+scdl
+mediafire
+mf
+gdrive
+gd
+apk
+playstore
+app
+modapk
+github
+gitclone
+git
+npm
+yarn
+pinterest
+pin
+pinvid
+imgur
+img
+wallpaper
+wall
+animepic
+manga
+nhentai
+rule34      
 
 
              
